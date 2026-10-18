@@ -1,48 +1,65 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About — Emmanuel School</title>
-<style>
- body{font-family:Inter,Arial;margin:0;color:#222;background:#fff}
- .wrap{max-width:1100px;margin:0 auto;padding:18px}
- header{display:flex;align-items:center;justify-content:space-between}
- nav a{margin-left:12px;text-decoration:none;color:#222;font-weight:600}
- .hero{padding:20px;border-radius:10px;margin-top:12px;background:url('https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.08)}
- .card{background:#fff;padding:12px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.04);margin-top:12px}
-</style>
-</head><body>
-  <div class="wrap">
-    <header>
-      <div style="display:flex;align-items:center;gap:12px">
-        <img src="logo.png" alt="logo" style="height:56px">
-        <div><strong style="color:#8a1a2a">Emmanuel Senior Secondary School</strong><div style="font-size:.85rem;color:#666">Tonk, Rajasthan</div></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Emmanuel Senior Secondary School</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="School logo" />
+        <div>
+          <div style="font-weight: 800; color: var(--maroon);">Emmanuel Senior Secondary School</div>
+        </div>
       </div>
-      <nav><a href="index.html">Home</a><a href="admissions.html">Admissions</a><a href="faculty.html">Faculty</a><a href="contact.html">Contact</a></nav>
-    </header>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero">
-      <h1>About Us</h1>
-      <p style="max-width:700px">Established in 1976, Emmanuel Senior Secondary School is CBSE affiliated (ID: 1730313) — providing holistic education from Nursery to Class XII.</p>
-    </section>
+  <main class="container section">
+    <h2 class="section-title">About Us</h2>
 
-    <section class="card">
-      <h2>Vision</h2>
-      <p>To become a leading institution that develops confident and responsible individuals.</p>
-      <h2>Mission</h2>
-      <ul>
-        <li>Quality education for every child</li>
-        <li>Character and value-based learning</li>
-        <li>Science, sports, arts and technology</li>
-      </ul>
-    </section>
+    <div class="card">
+      <p>
+        Emmanuel Senior Secondary School, Tonk is committed to delivering holistic education
+        that combines academic excellence with values, creativity, discipline and leadership.
+      </p>
+      <p>
+        Founded in 1976, the school aims to shape confident, responsible and future-ready students
+        through quality teaching, strong values and a nurturing environment.
+      </p>
+    </div>
 
-    <section class="card">
-      <h2>Principal</h2>
-      <p><strong>Mrs. Shiby Thomas</strong></p>
-      <p>We believe in partnership between teachers, parents and students for a brighter future.</p>
-    </section>
+    <div class="grid" style="margin-top: 22px;">
+      <div class="card">
+        <h3>Our Vision</h3>
+        <p>To become a premier educational institution known for excellence, discipline and integrity.</p>
+      </div>
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>To nurture knowledge, confidence, creativity and leadership among students.</p>
+      </div>
+      <div class="card">
+        <h3>Our Values</h3>
+        <p>Excellence, integrity, respect, honesty and compassion in all learning experiences.</p>
+      </div>
+    </div>
+  </main>
 
-    <footer style="margin-top:18px;color:#666">© 2026 Emmanuel Senior Secondary School</footer>
-  </div>
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Emmanuel Senior Secondary School</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
