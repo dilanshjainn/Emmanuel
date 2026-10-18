@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Emmanuel Senior Secondary School — Education for Excellence</title>
+  <meta name="description" content="Emmanuel Senior Secondary School, Tonk — Education for Excellence, Values for Life. CBSE affiliated school on Jaipur Road, Tonk." />
+  <meta name="theme-color" content="#5B0B1A" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root{
+      --maroon:#5B0B1A;
+      --orange:#F7A623;
+      --cream:#F5F1EA;
+      --charcoal:#1E1E1E;
+      --beige:#D9CBB3;
+      --max-width:1100px;
+      --radius:8px;
+      --gap:24px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--charcoal);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--cream),#fff);line-height:1.5}
+    .container{width:calc(100% - 40px);max-width:var(--max-width);margin:0 auto}
+    header{background:#fff;box-shadow:0 3px 10px rgba(0,0,0,.06);position:sticky;top:0;z-index:30}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:56px;width:auto;border-radius:6px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--charcoal);text-decoration:none;font-weight:600;padding:8px 10px;border-radius:6px}
+    nav a:hover{background:rgba(91,11,26,.06)}
+    .cta-buttons{display:flex;gap:10px}
+    .btn{display:inline-block;background:var(--orange);color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;font-weight:700}
+    .btn.secondary{background:transparent;color:var(--maroon);border:2px solid var(--maroon)}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;align-items:center;gap:20px;padding:28px 0}
+    .hero-inner{background:rgba(255,255,255,.9);padding:22px;border-radius:12px;box-shadow:0 8px 30px rgba(91,11,26,0.06)}
+    .hero h1{margin:0;font-size:2rem;color:var(--maroon);letter-spacing:1px}
+    .hero p.lead{margin:10px 0 18px;font-size:1.05rem}
+    .hero img.hero-photo{width:100%;height:320px;object-fit:cover;border-radius:12px;margin-top:10px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    /* Sections */
+    section{padding:42px 0;border-bottom:1px solid rgba(0,0,0,.04)}
+    h2{color:var(--maroon);margin:0 0 12px;font-size:1.35rem}
+    .grid{display:grid;gap:var(--gap)}
+    .two-col{grid-template-columns:1fr 360px}
+    .card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.04)}
+    ul.check{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    ul.check li::before{content:"✅";margin-right:8px}
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    /* Contact */
+    form{display:grid;gap:12px}
+    input,textarea,select{padding:10px;border:1px solid #ddd;border-radius:8px;font-size:1rem}
+    input:focus,textarea:focus{outline:3px solid rgba(247,166,35,0.12);border-color:var(--orange)}
+    button[type="submit"]{background:var(--maroon);color:#fff;padding:10px;border-radius:8px;border:0;font-weight:700}
+    footer{background:var(--maroon);color:#fff;padding:22px 0;margin-top:30px}
+    footer a{color:#fff;text-decoration:underline}
+    /* Responsive */
+    @media (min-width:900px){
+      .hero{grid-template-columns:1fr 420px;gap:30px}
+      .gallery img{height:160px}
+    }
+    @media (max-width:700px){
+      nav{display:none}
+      .mobile-menu-toggle{display:block}
+      .two-col{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .hero img.hero-photo{height:220px}
+    }
+    .mobile-menu-toggle{display:none;padding:8px;border-radius:8px;background:transparent;border:0;color:var(--maroon);font-weight:700}
+    .site-badge{font-weight:700;color:var(--maroon);background:var(--beige);padding:6px 10px;border-radius:20px}
+    .stats{display:flex;gap:10px;flex-wrap:wrap}
+    .stat{background:linear-gradient(180deg,#fff,#f8f4f0);padding:12px;border-radius:8px;min-width:120px;text-align:center}
+    .notice{background:linear-gradient(90deg,var(--orange),#ffd99b);padding:10px;border-radius:6px;color:#420000;font-weight:700}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <img src="logo.png" alt="Emmanuel School logo" />
+        <div>
+          <div class="site-badge">Emmanuel Senior Secondary School</div>
+          <div style="font-size:0.85rem;color:#666">"Education for Excellence, Values for Life"</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#activities">Activities</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="cta-buttons" style="align-items:center">
+        <button class="mobile-menu-toggle" id="menuToggle" aria-expanded="false">Menu</button>
+        <a class="btn" href="#admissions">Admissions Open</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero" aria-label="Welcome to Emmanuel School">
+      <div class="hero-inner">
+        <h1>Welcome to Emmanuel Senior Secondary School</h1>
+        <p class="lead">"Education for Excellence, Values for Life" — where learning meets innovation and students are encouraged to achieve their full potential.</p>
+        <p>We focus on academic excellence, discipline, creativity, character development, and the overall growth of every student.</p>
+
+        <div class="buttons">
+          <a class="btn" href="#about">Explore Our School</a>
+          <a class="btn secondary" href="#admissions">Admissions Open</a>
+          <a class="btn" href="#contact">Contact Us</a>
+        </div>
+
+        <div style="margin-top:14px">
+          <div class="stats" aria-hidden="true" style="margin-top:12px">
+            <div class="stat"><strong>📚 Quality Education</strong></div>
+            <div class="stat"><strong>👨‍🏫 Experienced Teachers</strong></div>
+            <div class="stat"><strong>💻 Smart Classrooms</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img class="hero-photo" src="image1.jpg" alt="Emmanuel School building and campus" />
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="aboutHeading">
+      <div class="container">
+        <h2 id="aboutHeading">About Us</h2>
+        <div class="grid two-col" style="align-items:start">
+          <div>
+            <p><strong>Who We Are</strong></p>
+            <p>Emmanuel Senior Secondary School, established in 1976, is a co-educational, English-medium school located on Jaipur Road, Near Bus Stand, Kali Paltan, Tonk, Rajasthan (PIN 304001). The school is affiliated to the Central Board of Secondary Education (CBSE), Affiliation ID: 1730313, and is managed by the E.E. & Charitable Society.</p>
+
+            <h3>Our Vision</h3>
+            <p>To become a leading educational institution that develops knowledgeable, confident, responsible, and successful individuals.</p>
+
+            <h3>Our Mission</h3>
+            <ul>
+              <li>Provide quality education to every student.</li>
+              <li>Encourage creativity and independent thinking.</li>
+              <li>Develop discipline, honesty, and respect.</li>
+              <li>Promote sports, arts, technology, and innovation.</li>
+              <li>Prepare students for higher education and future careers.</li>
+            </ul>
+
+            <p><strong>Board Affiliation:</strong> Central Board of Secondary Education (CBSE) — Affiliation ID: 1730313</p>
+            <p><strong>Principal:</strong> Mrs. Shiby Thomas</p>
+          </div>
+
+          <aside class="card" aria-label="Highlights">
+            <h3>Our Highlights</h3>
+            <ul class="check">
+              <li>Quality Education</li>
+              <li>Experienced Teachers</li>
+              <li>Smart Classrooms & Computer Education</li>
+              <li>Science & Computer Laboratories</li>
+              <li>Sports & Extracurriculars</li>
+              <li>Moral Values & Personality Development</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="principal" aria-labelledby="principalHeading">
+      <div class="container">
+        <h2 id="principalHeading">Principal's Message</h2>
+        <div class="card">
+          <p><strong>Message from the Principal</strong></p>
+          <p>Dear Students, Parents, and Visitors,</p>
+          <p>It gives me immense pleasure to welcome you to our school website. Education is not only about gaining knowledge; it is also about developing character, confidence, and responsibility. At our school, we strive to create an environment where every student feels encouraged to learn, explore, and achieve their goals.</p>
+          <p>We believe that the partnership between teachers, parents, and students is essential for success. Together, we can build a brighter future for our children.</p>
+          <p style="margin-top:12px"><strong>With best wishes,</strong><br/>Mrs. Shiby Thomas<br/>Principal<br/>Emmanuel Senior Secondary School</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="academics" aria-labelledby="academicsHeading">
+      <div class="container">
+        <h2 id="academicsHeading">Academics</h2>
+        <p>Our Academic Programmes are structured to meet the educational needs of students at different stages.</p>
+
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:12px">
+          <div class="card">
+            <h4>Primary Classes</h4>
+            <ul>
+              <li>Foundational literacy and numeracy</li>
+              <li>Creative learning activities</li>
+              <li>Language development</li>
+              <li>Basic computer education</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Middle Classes</h4>
+            <ul>
+              <li>Mathematics & Science</li>
+              <li>English & Hindi</li>
+              <li>Social Science</li>
+              <li>Computer Science, Art & Life Skills</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Secondary Classes</h4>
+            <ul>
+              <li>Subject-focused learning</li>
+              <li>Practical activities & projects</li>
+              <li>Examination preparation</li>
+              <li>Career awareness & guidance</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Senior Secondary</h4>
+            <ul>
+              <li>Science stream</li>
+              <li>Commerce stream</li>
+              <li>Humanities stream</li>
+              <li><em>Note: Display only streams offered by your school.</em></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="facilities" aria-labelledby="facilitiesHeading">
+      <div class="container">
+        <h2 id="facilitiesHeading">Facilities</h2>
+        <p>Modern facilities that support academic achievement and all‑round development:</p>
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:12px">
+          <div class="card"><strong>Smart Classrooms</strong><p>Technology-supported teaching & learning.</p></div>
+          <div class="card"><strong>Computer Laboratory</strong><p>Practical computer education & digital skills.</p></div>
+          <div class="card"><strong>Science Laboratory</strong><p>Hands-on experiments and investigations.</p></div>
+          <div class="card"><strong>Library</strong><p>Books & resources encouraging reading.</p></div>
+          <div class="card"><strong>Sports Facilities</strong><p>Fitness, teamwork, and sportsmanship.</p></div>
+          <div class="card"><strong>Transport</strong><p>School buses (where available).</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="admissions" aria-labelledby="admissionsHeading">
+      <div class="container">
+        <h2 id="admissionsHeading">Admissions</h2>
+        <p class="notice">Admissions Open — Give your child the opportunity to learn, grow and succeed.</p>
+
+        <div class="grid two-col" style="margin-top:12px">
+          <div>
+            <h4>Admission Process</h4>
+            <ol>
+              <li>Obtain the admission form.</li>
+              <li>Complete the form with required details.</li>
+              <li>Submit necessary documents.</li>
+              <li>Attend an interaction or assessment (if required).</li>
+              <li>Complete admission formalities & fee payment.</li>
+            </ol>
+
+            <h4>Documents Required</h4>
+            <ul>
+              <li>Birth certificate (where applicable)</li>
+              <li>Previous school's report card</li>
+              <li>Transfer certificate (if applicable)</li>
+              <li>Passport-size photographs</li>
+            </ul>
+
+            <p><strong>Contact the school office</strong> for admission dates, eligibility and fees.</p>
+            <a class="btn" href="#contact">Apply for Admission</a>
+          </div>
+
+          <aside class="card">
+            <h4>Quick Details</h4>
+            <p><strong>Office Hours:</strong> Mon–Sat, 08:00 AM – 03:00 PM</p>
+            <p><strong>Phone:</strong> +91 01432 248049</p>
+            <p><strong>Email:</strong> <a href="mailto:emmanueltonk@rediffmail.com">emmanueltonk@rediffmail.com</a></p>
+            <p><strong>Website:</strong> <a href="https://emmanuelschooltonk.com" target="_blank" rel="noopener">emmanuelschooltonk.com</a></p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities" aria-labelledby="activitiesHeading">
+      <div class="container">
+        <h2 id="activitiesHeading">School Activities</h2>
+        <p>Learning beyond the classroom — we encourage participation to develop confidence, creativity, and leadership.</p>
+
+        <ul style="columns:2;gap:12px;margin-top:12px">
+          <li>Annual Day</li>
+          <li>Independence Day & Republic Day</li>
+          <li>Sports Day</li>
+          <li>Science Exhibitions</li>
+          <li>Quiz Competitions</li>
+          <li>Debate & Speech</li>
+          <li>Art & Craft Activities</li>
+          <li>Cultural Programmes</li>
+          <li>Environmental Campaigns</li>
+          <li>Computer & Technology Projects</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="news" aria-labelledby="newsHeading">
+      <div class="container">
+        <h2 id="newsHeading">News & Announcements</h2>
+        <p>Use this section to publish current school announcements (admissions, results, meetings, holidays).</p>
+        <div style="margin-top:12px">
+          <div class="card">
+            <strong>Example:</strong> Admission notification for the new academic session will be published here. Replace example items with verified announcements before publishing.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" aria-labelledby="galleryHeading">
+      <div class="container">
+        <h2 id="galleryHeading">Gallery</h2>
+        <p>Memories and Achievements — use photos only with appropriate permission.</p>
+        <div class="gallery" style="margin-top:12px">
+          <img src="gallery1.jpg" alt="School campus" />
+          <img src="gallery2.jpg" alt="Classroom activities" />
+          <img src="gallery3.jpg" alt="Sports event" />
+          <img src="gallery4.jpg" alt="Annual function" />
+          <img src="gallery5.jpg" alt="Science exhibition" />
+          <img src="gallery6.jpg" alt="Student projects" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contactHeading">
+      <div class="container">
+        <h2 id="contactHeading">Contact Us</h2>
+        <p>We are happy to assist parents, students, and visitors with their queries.</p>
+
+        <div class="grid two-col" style="margin-top:12px">
+          <div>
+            <form id="contactForm" action="https://formspree.io/f/xaeqkpqv" method="POST">
+              <label for="name">Student / Parent Name</label>
+              <input id="name" name="name" type="text" required />
+
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" required />
+
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required />
+
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" />
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+
+              <button type="submit">Submit Message</button>
+              <div id="formStatus" role="status" style="margin-top:10px;color:green;display:none">Message sent — check your email (Formspree).</div>
+            </form>
+          </div>
+
+          <aside class="card">
+            <h4>School Office</h4>
+            <p><strong>Emmanuel Senior Secondary School</strong></p>
+            <p>Address: Jaipur Road, Near Bus Stand, Kali Paltan, Tonk, Rajasthan, 304001, India</p>
+            <p>Phone: +91 01432 248049</p>
+            <p>Email: <a href="mailto:emmanueltonk@rediffmail.com">emmanueltonk@rediffmail.com</a></p>
+            <p>Office Hours: Mon–Sat, 08:00 AM – 03:00 PM</p>
+            <p>Affiliated to CBSE — Affiliation ID: 1730313</p>
+            <div style="margin-top:10px">
+              <iframe title="School Location" src="https://www.google.com/maps?q=Emmanuel+Senior+Secondary+School+Tonk+Rajasthan+304001&amp;output=embed" style="width:100%;height:200px;border:0;border-radius:8px"></iframe>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>
+          <strong>Emmanuel Senior Secondary School</strong><br/>
+          Empowering young minds through knowledge, values, and innovation.<br/>
+          CBSE Affiliation ID: 1730313
+        </div>
+        <div style="text-align:right">
+          Quick Links:<br/>
+          <a href="#home">Home</a> | <a href="#about">About</a> | <a href="#admissions">Admissions</a>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>© 2026 Emmanuel Senior Secondary School. All rights reserved.</div>
+        <div style="font-size:0.9rem;color:#ffd9b8">Website data sourced from public listings and the school's site — contact the school to confirm details.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle (simple)
+    const menuToggle = document.getElementById('menuToggle');
+    if(menuToggle){
+      menuToggle.addEventListener('click', () => {
+        const nav = document.querySelector('nav');
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!expanded));
+        if(nav.style.display === 'flex') nav.style.display = 'none';
+        else nav.style.display = 'flex';
+      });
+    }
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'}); }
+      });
+    });
+
+    // Demo contact form handler (show success message after submit)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      // allow Formspree to handle submission — show message after short delay
+      setTimeout(()=>{ document.getElementById('formStatus').style.display = 'block'; }, 600);
+    });
+  </script>
+</body>
+</html>
