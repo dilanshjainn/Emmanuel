@@ -1,124 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emmanuel Senior Secondary School</title>
-  <meta name="description" content="Emmanuel Senior Secondary School, Tonk — Education for Excellence." />
-  <style>
-    :root{
-      --maroon:#5B0B1A; --orange:#F7A623; --cream:#F5F1EA; --charcoal:#1E1E1E;
-      --maxw:1100px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(#fff,#f8f5f2);color:var(--charcoal)}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:56px}
-    nav a{margin-left:12px;text-decoration:none;color:var(--charcoal);font-weight:600}
-    /* Hero with subtle animation */
-    .hero{display:flex;gap:26px;align-items:center;margin:18px 0;padding:24px;border-radius:12px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.06);overflow:hidden}
-    .hero-left{flex:1}
-    .hero-right{width:360px}
-    .hero h1{color:var(--maroon);margin:0 0 8px;font-size:1.6rem;animation:slideIn 900ms ease both}
-    .hero p{margin:0 0 14px;opacity:0.9}
-    .cta{display:flex;gap:12px}
-    .btn{background:var(--orange);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;transition:transform .18s ease,box-shadow .18s}
-    .btn:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(247,166,35,.18)}
-    .btn.secondary{background:transparent;border:2px solid var(--maroon);color:var(--maroon)}
-    @keyframes slideIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-    /* card grid */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
-    .card{background:#fff;padding:16px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.04);transform:translateY(10px);opacity:0;transition:all .6s ease}
-    .card.visible{transform:none;opacity:1}
-    /* gallery */
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
-    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px;display:block}
-    /* footer */
-    footer{margin-top:30px;padding:18px;text-align:center;background:var(--maroon);color:#fff;border-radius:8px}
-    /* responsive */
-    @media(max-width:900px){.hero{flex-direction:column}.hero-right{width:100%}}
-  </style>
+  <meta name="description" content="Emmanuel Senior Secondary School, Tonk, Rajasthan. Quality education, values, discipline and academic excellence." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header>
+  <header class="topbar">
+    <div class="container nav">
       <div class="brand">
-        <img src="logo.png" alt="Emmanuel logo">
+        <img src="assets/logo.png" alt="School logo" />
         <div>
-          <div style="font-weight:800;color:var(--maroon)">Emmanuel Senior Secondary School</div>
-          <div style="font-size:0.85rem;color:#666">"Education for Excellence, Values for Life"</div>
+          <div style="font-weight: 800; color: var(--maroon);">Emmanuel Senior Secondary School</div>
+          <small style="color: var(--muted);">Education for Excellence, Values for Life</small>
         </div>
       </div>
-      <nav aria-label="Main">
+
+      <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
         <a href="admissions.html">Admissions</a>
         <a href="faculty.html">Faculty</a>
-        <a href="notices.html">Notices</a>
+        <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="hero-left">
-        <h1 id="heroTitle">Welcome to Emmanuel Senior Secondary School</h1>
-        <p>Quality education, strong values, and a nurturing environment — CBSE affiliated, Tonk, Rajasthan.</p>
-        <div class="cta">
-          <a class="btn" href="admissions.html">Admissions Open</a>
-          <a class="btn secondary" href="about.html">Learn More</a>
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Welcome to Emmanuel Senior Secondary School</h1>
+        <p>
+          We nurture character, confidence and creativity in every learner. With
+          a strong focus on academic excellence, discipline, leadership and values,
+          we prepare students for a brighter future.
+        </p>
+        <div>
+          <a href="admissions.html" class="btn">Admissions Open</a>
+          <a href="about.html" class="btn btn-secondary">Know More</a>
         </div>
       </div>
-      <div class="hero-right">
-        <!-- remote hero image (Unsplash) -->
-        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" alt="School building" style="width:100%;height:220px;object-fit:cover;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.08);">
+
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80" alt="School campus" />
       </div>
     </section>
 
-    <section>
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <h2 style="color:var(--maroon)">Highlights</h2>
-        <div style="font-weight:700;color:#444">CBSE ID: 1730313</div>
-      </div>
-
-      <div class="grid" id="cards">
-        <div class="card"> <strong>Experienced Teachers</strong><p style="margin:8px 0 0">Skilled faculty for all grades.</p> </div>
-        <div class="card"> <strong>Smart Classrooms</strong><p style="margin:8px 0 0">Digital teaching & interactive boards.</p> </div>
-        <div class="card"> <strong>Labs & Library</strong><p style="margin:8px 0 0">Science, computer labs and reading resources.</p> </div>
-        <div class="card"> <strong>Sports & Activities</strong><p style="margin:8px 0 0">Holistic student development.</p> </div>
-        <div class="card"> <strong>Values & Character</strong><p style="margin:8px 0 0">Moral education alongside academics.</p> </div>
-        <div class="card"> <strong>Transport</strong><p style="margin:8px 0 0">Safe school bus routes (where available).</p> </div>
+    <section class="section">
+      <h2 class="section-title">Why Choose Us</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Quality Education</h3>
+          <p>Strong academic foundation with disciplined learning and personal mentoring.</p>
+        </article>
+        <article class="card">
+          <h3>Smart Classrooms</h3>
+          <p>Digital learning environment that encourages creativity and engagement.</p>
+        </article>
+        <article class="card">
+          <h3>Sports & Activities</h3>
+          <p>Balanced development through sports, arts, culture and leadership.</p>
+        </article>
+        <article class="card">
+          <h3>Science Labs</h3>
+          <p>Hands-on learning that builds curiosity, confidence and critical thinking.</p>
+        </article>
+        <article class="card">
+          <h3>Value Education</h3>
+          <p>Character development, discipline and social responsibility at the core.</p>
+        </article>
+        <article class="card">
+          <h3>Supportive Faculty</h3>
+          <p>Dedicated teachers who shape future-ready students with care and expertise.</p>
+        </article>
       </div>
     </section>
 
-    <section>
-      <h2 style="color:var(--maroon);margin-top:18px">Gallery</h2>
-      <div class="gallery" id="gallery">
-        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=80" alt="classroom">
-        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80" alt="library">
-        <img src="https://images.unsplash.com/photo-1508873699372-7ae00a3d7f56?auto=format&fit=crop&w=1200&q=80" alt="sports">
-        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="student projects">
-        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=80" alt="science lab">
-        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1200&q=80" alt="students">
+    <section class="section">
+      <h2 class="section-title">School Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="School gallery 1" />
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="School gallery 2" />
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="School gallery 3" />
       </div>
     </section>
 
-    <footer>
-      Emmanuel Senior Secondary School — Jaipur Road, Near Bus Stand, Kali Paltan, Tonk — © 2026
-    </footer>
-  </div>
+    <section class="section">
+      <h2 class="section-title">Quick Facts</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Affiliation</h3>
+          <p>CBSE</p>
+        </div>
+        <div class="card">
+          <h3>Founded</h3>
+          <p>1976</p>
+        </div>
+        <div class="card">
+          <h3>Location</h3>
+          <p>Tonk, Rajasthan</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <script>
-    // reveal cards on scroll
-    function reveal(){
-      document.querySelectorAll('.card').forEach(el=>{
-        const r = el.getBoundingClientRect();
-        if(r.top < (window.innerHeight - 80)){ el.classList.add('visible'); }
-      });
-    }
-    window.addEventListener('scroll', reveal);
-    window.addEventListener('load', ()=>{ reveal(); });
-  </script>
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Emmanuel Senior Secondary School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
